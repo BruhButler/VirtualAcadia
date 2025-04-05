@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dyl0ahk2xu3ke"
+path="res://.godot/imported/shape-slope.obj-72071480919ed023a7654a74ba40fbeb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shape-slope.obj-72071480919ed023a7654a74ba40fbeb.mesh"]
+
+source_file="res://OBJ format/shape-slope.obj"
+dest_files=["res://.godot/imported/shape-slope.obj-72071480919ed023a7654a74ba40fbeb.mesh", "res://.godot/imported/shape-slope.obj-72071480919ed023a7654a74ba40fbeb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

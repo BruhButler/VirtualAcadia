@@ -1,0 +1,2067 @@
+[gd_scene load_steps=8 format=3 uid="uid://2l4ec2r8v4dr"]
+
+[ext_resource type="Script" uid="uid://jugyhndhuete" path="res://addons/road-generator/nodes/road_manager.gd" id="1_cwu2u"]
+[ext_resource type="Script" uid="uid://dvqqnsa3y4om3" path="res://addons/road-generator/nodes/road_container.gd" id="2_2g1u2"]
+[ext_resource type="Material" uid="uid://dq2molbirnpgx" path="res://addons/road-generator/resources/road_texture.material" id="3_o4j5r"]
+[ext_resource type="Script" uid="uid://cuanfykdpm1ac" path="res://addons/road-generator/nodes/road_point.gd" id="4_17jhl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgamy"]
+albedo_color = Color(0.0588235, 0.0705882, 0.0901961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dp5ku"]
+albedo_color = Color(0.0588235, 0.0705882, 0.0901961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xwdes"]
+albedo_color = Color(0.0588235, 0.0705882, 0.0901961, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="RoadManager" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45264, 0, 0.735841)
+script = ExtResource("1_cwu2u")
+metadata/_custom_type_script = "uid://jugyhndhuete"
+
+[node name="Road_001" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = ExtResource("3_o4j5r")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_002"), NodePath("RP_020"), NodePath("RP_019")])
+edge_rp_local_dirs = Array[int]([0, 1, 0])
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.976193, 0.00551672, -0.216834, 0.00760607, 0.999932, -0.00880235, 0.21677, -0.010242, -0.976169, 48.9418, 21.1515, -490.329)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_003")
+prior_mag = 16.0
+next_mag = 16.0
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.950342, -0.0448638, -0.307957, -0.0250029, 0.997362, -0.0681399, 0.310202, -0.0570564, -0.948957, 56.8316, 22.774, -461.048)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 22.0014
+next_mag = 16.0
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.986891, -0.000802334, -0.161387, 0.00955271, 0.997944, -0.0633768, 0.161106, -0.0640877, -0.984854, 67.1749, 26.1725, -418.427)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 21.5476
+next_mag = 22.0014
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.966019, -0.0749658, -0.24736, -0.0395299, 0.988607, -0.145234, 0.25543, -0.130521, -0.957977, 75.9732, 31.1759, -376.519)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_004")
+prior_mag = 27.9568
+next_mag = 21.5476
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.985329, 0.0227949, -0.169138, 0.0324211, 0.997994, -0.0543713, 0.16756, -0.0590573, -0.984091, 87.6785, 33.9354, -321.92)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_005")
+prior_mag = 26.8602
+next_mag = 27.9568
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.976844, -0.123178, -0.174939, -0.117504, 0.992164, -0.0424712, 0.178799, -0.0209318, -0.983663, 96.9398, 37.5875, -269.127)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_008")
+next_pt_init = NodePath("../RP_006")
+prior_mag = 37.1738
+next_mag = 26.8602
+
+[node name="RP_008" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.982715, -0.0625248, -0.17425, -0.0454308, 0.993907, -0.100421, 0.179467, -0.0907689, -0.979568, 109.944, 43.7801, -196.209)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_009")
+next_pt_init = NodePath("../RP_007")
+prior_mag = 30.4243
+next_mag = 37.1738
+
+[node name="RP_009" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.944922, -0.150543, -0.290618, -0.102337, 0.979315, -0.174554, 0.310885, -0.135199, -0.940783, 124.203, 48.079, -137.488)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_010")
+next_pt_init = NodePath("../RP_008")
+prior_mag = 18.99
+next_mag = 30.4243
+
+[node name="RP_010" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.976575, -0.0590134, -0.206927, -0.0500746, 0.997582, -0.0481772, 0.209271, -0.0366869, -0.977169, 133.723, 53.8453, -100.839)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_011")
+next_pt_init = NodePath("../RP_009")
+prior_mag = 22.4384
+next_mag = 18.99
+
+[node name="RP_011" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.935708, -0.141736, -0.32305, -0.126844, 0.98967, -0.066811, 0.329182, -0.0215387, -0.944021, 145.741, 57.3517, -57.6684)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_012")
+next_pt_init = NodePath("../RP_010")
+prior_mag = 22.0822
+next_mag = 22.4384
+
+[node name="RP_012" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.969561, -0.0561296, -0.238329, -0.042398, 0.997153, -0.0623602, 0.241151, -0.0503574, -0.96918, 154.303, 59.1742, -14.5614)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_013")
+next_pt_init = NodePath("../RP_011")
+prior_mag = 28.984
+next_mag = 22.0822
+
+[node name="RP_013" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.966151, -0.0300983, -0.256215, -0.0249589, 0.999417, -0.0232878, 0.256766, -0.0161041, -0.966339, 169.97, 62.0563, 41.1155)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_014")
+next_pt_init = NodePath("../RP_012")
+prior_mag = 6.26244
+next_mag = 28.984
+
+[node name="RP_014" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.981396, 0.0169386, -0.191245, -0.00320796, 0.994515, 0.104546, 0.191967, 0.103215, -0.975959, 176.609, 64.5902, 78.0077)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_015")
+next_pt_init = NodePath("../RP_013")
+prior_mag = 29.3023
+next_mag = 18.6785
+
+[node name="RP_015" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.873891, -0.0559165, -0.482894, -0.0104284, 0.99529, -0.096377, 0.486009, -0.0791871, -0.870359, 188.364, 66.967, 116.902)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_016")
+next_pt_init = NodePath("../RP_014")
+prior_mag = 16.0
+next_mag = 16.971
+
+[node name="RP_016" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.827081, -0.0235376, -0.56159, 0, 0.999123, -0.0418756, 0.562083, -0.0346345, -0.826355, 202.169, 67.7924, 141.641)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_017")
+next_pt_init = NodePath("../RP_015")
+prior_mag = 20.3404
+next_mag = 16.0
+
+[node name="RP_017" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.63552, 0.0950693, -0.766209, 0.173443, 0.984605, -0.0216924, 0.752351, -0.14668, -0.642226, 229.247, 68.3484, 168.344)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_018")
+next_pt_init = NodePath("../RP_016")
+prior_mag = 16.0
+next_mag = 20.3404
+
+[node name="RP_018" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.70978, -0.0687397, -0.701062, -3.91507e-09, 0.995227, -0.0975829, 0.704424, -0.0692624, -0.706392, 250.955, 71.4756, 190.23)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_020")
+next_pt_init = NodePath("../RP_017")
+prior_mag = 16.4303
+next_mag = 16.0
+
+[node name="RP_020" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(-0.772734, 0, -0.63473, 0, 1, 0, 0.63473, 0, -0.772734, 272.211, 71.6209, 213.701)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+next_pt_init = NodePath("../RP_018")
+prior_mag = 16.4303
+next_mag = 15.5716
+
+[node name="RP_019" type="Node3D" parent="RoadManager/Road_001"]
+transform = Transform3D(0.463685, 0.0352359, -0.885299, -0.0189107, 0.999375, 0.0298716, 0.885798, 0.00289061, 0.464061, -24.1087, 21.6848, -516.291)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_001")
+prior_mag = 33.8154
+next_mag = 33.8154
+
+[node name="Road_002" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = ExtResource("3_o4j5r")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_006")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_002"]
+transform = Transform3D(-0.1632, 0.0193804, 0.986403, 0, 0.999807, -0.0196438, -0.986593, -0.00320586, -0.163168, 31.871, 20.3499, -524.926)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_002")
+next_mag = 28.7183
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_002"]
+transform = Transform3D(-0.163236, 0.0143697, 0.986482, -0.00190569, 0.999887, -0.0148803, -0.986585, -0.00430895, -0.163191, -24.7716, 21.7278, -515.557)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 42.5479
+next_mag = 28.7183
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_002"]
+transform = Transform3D(-0.217529, -0.0506808, 0.974737, -0.103254, 0.994242, 0.0286521, -0.970577, -0.0944127, -0.22151, -108.29, 21.6376, -499.225)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 91.3604
+next_mag = 42.5479
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_002"]
+transform = Transform3D(-0.206476, -0.0228634, 0.978184, -0.0211738, 0.999597, 0.0188945, -0.978222, -0.0168106, -0.206877, -286.745, 17.9668, -460.091)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 61.1071
+next_mag = 91.3604
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_002"]
+transform = Transform3D(-0.222468, -0.00296053, 0.974935, -0.0232187, 0.999728, -0.00226241, -0.974663, -0.0231401, -0.222476, -406.095, 17.2748, -433.866)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_004")
+prior_mag = 32.6368
+next_mag = 61.1071
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_002"]
+transform = Transform3D(0.0335844, 0.0877209, 0.995579, 0.00174146, 0.996134, -0.0878285, -0.999434, 0.00468343, 0.0333018, -471.01, 20.7655, -427.711)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+next_pt_init = NodePath("../RP_005")
+prior_mag = 32.6368
+next_mag = 32.6368
+
+[node name="Road_003" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = ExtResource("3_o4j5r")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_013")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.980891, -0.00655292, -0.19445, 0, 0.999433, -0.0336806, 0.19456, -0.033037, -0.980334, -284.804, 18.0835, -456.26)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_002")
+next_mag = 16.0
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.980955, -0.00542334, -0.194159, 0, 0.99961, -0.0279216, 0.194234, -0.0273899, -0.980573, -278.001, 19.4069, -425.009)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 9.98687
+next_mag = 16.0
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.967268, -0.018143, -0.253108, 0, 0.997441, -0.0714974, 0.253758, -0.0691572, -0.964792, -273.866, 20.8729, -405.913)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 21.9839
+next_mag = 9.98687
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.979575, -0.00421106, -0.201034, 0, 0.999781, -0.0209424, 0.201078, -0.0205147, -0.97936, -264.217, 23.4109, -362.781)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 18.7537
+next_mag = 21.9839
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.976672, -0.0101154, -0.214497, 0, 0.99889, -0.0471064, 0.214735, -0.0460076, -0.975588, -256.37, 25.5009, -326.763)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_004")
+prior_mag = 26.9467
+next_mag = 18.7537
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.979148, -0.0484572, -0.197282, 0, 0.971134, -0.238533, 0.203146, -0.23356, -0.950885, -244.609, 30.9712, -274.055)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_005")
+prior_mag = 22.9434
+next_mag = 26.9467
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.970716, -0.0384079, -0.237138, 0, 0.987136, -0.159881, 0.240228, -0.155199, -0.958229, -233.613, 33.6649, -229.955)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_008")
+next_pt_init = NodePath("../RP_006")
+prior_mag = 19.9542
+next_mag = 22.9434
+
+[node name="RP_008" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.976672, -0.000749566, -0.214734, 0, 0.999994, -0.00349065, 0.214735, -0.00340922, -0.976666, -225.745, 37.3441, -190.753)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_009")
+next_pt_init = NodePath("../RP_007")
+prior_mag = 41.0729
+next_mag = 19.9542
+
+[node name="RP_009" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.977783, -0.0117012, -0.209292, 0, 0.998441, -0.0558215, 0.209619, -0.0545813, -0.976259, -205.867, 38.9675, -110.689)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_010")
+next_pt_init = NodePath("../RP_008")
+prior_mag = 43.5588
+next_mag = 41.0729
+
+[node name="RP_010" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.981959, -0.00989649, -0.188836, 0, 0.99863, -0.052336, 0.189095, -0.0513918, -0.980613, -185.901, 48.8887, -27.173)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_011")
+next_pt_init = NodePath("../RP_009")
+prior_mag = 56.3553
+next_mag = 43.5588
+
+[node name="RP_011" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.968148, -0.0039328, -0.250349, 0, 0.999877, -0.0157073, 0.25038, -0.015207, -0.968028, -159.428, 49.8549, 82.9387)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_012")
+next_pt_init = NodePath("../RP_010")
+prior_mag = 43.3659
+next_mag = 54.2811
+
+[node name="RP_012" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.956871, -0.0855927, -0.277617, -0.0804863, 0.996311, -0.0297603, 0.27914, -0.00613239, -0.960231, -139.914, 54.4103, 167.281)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_013")
+next_pt_init = NodePath("../RP_011")
+prior_mag = 35.6795
+next_mag = 43.3659
+
+[node name="RP_013" type="Node3D" parent="RoadManager/Road_003"]
+transform = Transform3D(-0.94088, 0.00945812, -0.338606, 0, 0.99961, 0.0279216, 0.338738, 0.0262709, -0.940514, -124.138, 54.6668, 236.444)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+next_pt_init = NodePath("../RP_012")
+prior_mag = 35.6795
+next_mag = 35.6795
+
+[node name="Road_004" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = ExtResource("3_o4j5r")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_017")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.228289, -0.0191149, -0.973406, 0, 0.999807, -0.0196333, 0.973593, 0.00448207, 0.228245, -136.387, 54.2027, 165.895)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_002")
+next_mag = 16.0
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.226651, 0.00339981, -0.97397, 0, 0.999994, 0.00349065, 0.973976, -0.000791161, 0.22665, -117.91, 55.7809, 162.218)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 9.13249
+next_mag = 16.0
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.231748, 0.0644697, -0.970637, 0, 0.997801, 0.0662739, 0.972776, -0.0153588, 0.231238, -100.301, 55.6449, 157.986)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 8.74798
+next_mag = 9.13249
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.337095, -0.00164318, -0.941469, 0, 0.999998, -0.00174533, 0.94147, 0.000588342, 0.337095, -83.5411, 55.5858, 152.967)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 8.0
+next_mag = 8.74798
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(-0.00174539, -0.0453629, -0.998969, 0, 0.99897, -0.045363, 0.999998, -7.91759e-05, -0.00174359, -68.9088, 56.4245, 150.295)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_004")
+prior_mag = 10.1595
+next_mag = 8.0
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(-0.101056, -0.0572693, -0.993231, 0, 0.998342, -0.057564, 0.994881, -0.00581721, -0.100889, -48.6817, 57.971, 151.373)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_005")
+prior_mag = 14.6083
+next_mag = 10.1595
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(-0.401948, -0.0590898, -0.913754, 0, 0.997916, -0.0645323, 0.915663, -0.0259386, -0.40111, -21.8889, 59.8572, 162.972)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_008")
+next_pt_init = NodePath("../RP_006")
+prior_mag = 13.5639
+next_mag = 14.6083
+
+[node name="RP_008" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(-0.105795, -0.0292486, -0.993958, 0.00997078, 0.999486, -0.0304726, 0.994338, -0.0131344, -0.105449, 5.0911, 61.2201, 167.812)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_009")
+next_pt_init = NodePath("../RP_007")
+prior_mag = 12.9346
+next_mag = 13.5639
+
+[node name="RP_009" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.364636, -0.0346709, -0.930504, 0.0132432, 0.999398, -0.0320483, 0.931056, -0.00063683, 0.364876, 30.4934, 61.4013, 164.261)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_010")
+next_pt_init = NodePath("../RP_008")
+prior_mag = 11.6122
+next_mag = 12.9346
+
+[node name="RP_010" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.438371, -0.089268, -0.89435, 0, 0.995055, -0.0993197, 0.898794, 0.0435389, 0.436204, 52.9577, 62.3337, 156.254)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_011")
+next_pt_init = NodePath("../RP_009")
+prior_mag = 8.22837
+next_mag = 11.6122
+
+[node name="RP_011" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.377129, -0.0889412, -0.92188, 0.0546676, 0.99578, -0.0737072, 0.924546, -0.0225999, 0.3804, 68.6705, 64.3012, 149.589)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_012")
+next_pt_init = NodePath("../RP_010")
+prior_mag = 8.08014
+next_mag = 8.22837
+
+[node name="RP_012" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.723771, -0.0377823, -0.689004, -0.0240732, 0.996509, -0.0799325, 0.689619, 0.0744394, 0.720336, 83.0312, 64.9305, 142.249)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_013")
+next_pt_init = NodePath("../RP_011")
+prior_mag = 13.2716
+next_mag = 8.08014
+
+[node name="RP_013" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.657375, -0.060435, -0.751136, 0, 0.996779, -0.0801989, 0.753563, 0.0527208, 0.655258, 102.139, 66.0211, 118.538)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_014")
+next_pt_init = NodePath("../RP_012")
+prior_mag = 9.28132
+next_mag = 13.2716
+
+[node name="RP_014" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.429377, -0.00788116, -0.903091, -3.35012e-10, 0.999962, -0.00872653, 0.903126, 0.00374697, 0.42936, 115.167, 67.6435, 104.84)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_015")
+next_pt_init = NodePath("../RP_013")
+prior_mag = 4.65695
+next_mag = 7.46467
+
+[node name="RP_015" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.290702, 0.0717406, -0.95412, 0, 0.997185, 0.0749787, 0.956813, -0.0217965, 0.289884, 128.519, 67.6244, 103.047)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_016")
+next_pt_init = NodePath("../RP_014")
+prior_mag = 20.0941
+next_mag = 16.3314
+
+[node name="RP_016" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(0.300756, -0.00166452, -0.953699, 9.53889e-12, 0.999998, -0.00174533, 0.953701, 0.000524917, 0.300755, 167.735, 64.5794, 93.3235)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+prior_pt_init = NodePath("../RP_017")
+next_pt_init = NodePath("../RP_015")
+prior_mag = 8.3168
+next_mag = 20.0941
+
+[node name="RP_017" type="Node3D" parent="RoadManager/Road_004"]
+transform = Transform3D(-0.104528, 0.0208277, -0.994304, 0, 0.99978, 0.0209424, 0.994522, 0.00218908, -0.104506, 183.994, 61.6798, 92.7389)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+shoulder_width_l = 0.0
+shoulder_width_r = 0.0
+gutter_profile = Vector2(1, -0.5)
+next_pt_init = NodePath("../RP_016")
+prior_mag = 8.3168
+next_mag = 8.3168
+
+[node name="Road_005" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = SubResource("StandardMaterial3D_cgamy")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_006"), NodePath("RP_020")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(-0.303136, -0.0658448, 0.95067, 0.119469, 0.987113, 0.106463, -0.945429, 0.145848, -0.291363, 108.485, 66.6011, 108.6)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_002")
+next_pt_init = NodePath("../RP_006")
+next_mag = 2.00677
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(-0.287712, -0.156303, 0.944876, -0.168055, 0.979524, 0.110862, -0.942857, -0.126895, -0.308088, 92.7274, 65.2306, 111.103)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 8.0
+next_mag = 16.0
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(-0.0534433, -0.155936, 0.98632, -0.212575, 0.966868, 0.141342, -0.975682, -0.202113, -0.0848207, 77.8651, 63.7903, 114.088)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 8.10848
+next_mag = 8.0
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.125024, -0.00865725, 0.992116, -0.0624796, 0.997908, 0.0165813, -0.990184, -0.0640601, 0.124222, 61.6733, 63.0059, 113.719)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 2.33005
+next_mag = 8.10848
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.571975, 0.0221869, 0.819971, -0.0624796, 0.997908, 0.0165813, -0.817888, -0.0607156, 0.572165, 55.8, 62.2834, 109.118)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_004")
+prior_mag = 6.18055
+next_mag = 2.33005
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(-0.303136, -0.0658448, 0.95067, 0, 0.99761, 0.069096, -0.952947, 0.0209455, -0.302411, 105.341, 65.8998, 107.135)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_001")
+prior_mag = 2.00677
+next_mag = 2.00677
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.995659, -0.022384, 0.0903508, 0.00849276, 0.988452, 0.151293, -0.0926939, -0.149869, 0.984351, 53.7906, 61.2844, 96.9831)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_008")
+next_pt_init = NodePath("../RP_005")
+prior_mag = 3.47821
+next_mag = 6.18055
+
+[node name="RP_008" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.993715, 0.0758024, 0.0823693, -0.0772909, 0.996895, 0.0150313, -0.0809744, -0.0213031, 0.996489, 51.9185, 61.1875, 90.286)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_009")
+next_pt_init = NodePath("../RP_007")
+prior_mag = 1.6433
+next_mag = 3.47821
+
+[node name="RP_009" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.974969, 0.116349, -0.189468, -0.0711329, 0.970591, 0.229983, 0.210654, -0.210748, 0.954573, 51.5037, 61.1609, 87.0399)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_010")
+next_pt_init = NodePath("../RP_008")
+prior_mag = 4.02209
+next_mag = 1.6433
+
+[node name="RP_010" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.971093, 0.100516, 0.216507, -0.0835226, 0.992764, -0.0862782, -0.223613, 0.065701, 0.972461, 49.6267, 61.1766, 79.2097)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_011")
+next_pt_init = NodePath("../RP_009")
+prior_mag = 3.94681
+next_mag = 4.02209
+
+[node name="RP_011" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.943625, 0.0333099, 0.329335, -0.0567114, 0.996482, 0.0617053, -0.326122, -0.0769031, 0.942195, 48.6278, 60.9875, 71.419)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_012")
+next_pt_init = NodePath("../RP_010")
+prior_mag = 6.97703
+next_mag = 3.94681
+
+[node name="RP_012" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.97803, -0.0935051, 0.186316, 0.0937926, 0.995565, 0.007291, -0.186171, 0.0103442, 0.982463, 45.798, 59.9573, 58.09)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_013")
+next_pt_init = NodePath("../RP_011")
+prior_mag = 3.73875
+next_mag = 6.97703
+
+[node name="RP_013" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.980506, -0.15301, 0.123266, 0.14181, 0.985319, 0.0950612, -0.136001, -0.0757279, 0.98781, 44.0964, 59.5705, 50.6297)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_014")
+next_pt_init = NodePath("../RP_012")
+prior_mag = 6.79677
+next_mag = 3.73875
+
+[node name="RP_014" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.978127, -0.065174, 0.197532, 0.0642659, 0.997872, 0.0110122, -0.197829, 0.00192273, 0.980235, 41.1563, 59.5992, 37.3552)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_015")
+next_pt_init = NodePath("../RP_013")
+prior_mag = 6.66046
+next_mag = 6.79677
+
+[node name="RP_015" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.962549, -0.0923081, 0.254906, 0.0670705, 0.992102, 0.106001, -0.262678, -0.0849344, 0.961138, 38.1593, 59.0021, 24.3855)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_016")
+next_pt_init = NodePath("../RP_014")
+prior_mag = 10.4936
+next_mag = 6.66046
+
+[node name="RP_016" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.797879, 0.0111144, 0.602715, -0.00586923, 0.999926, -0.0106695, -0.602789, 0.00497549, 0.797885, 32.2148, 57.5684, 4.30543)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_017")
+next_pt_init = NodePath("../RP_015")
+prior_mag = 7.33741
+next_mag = 10.4936
+
+[node name="RP_017" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.988303, -0.0727634, 0.134024, 0.0391127, 0.970376, 0.23841, -0.147401, -0.230379, 0.961872, 26.7024, 56.2507, -9.22833)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_018")
+next_pt_init = NodePath("../RP_016")
+prior_mag = 7.12407
+next_mag = 7.33741
+
+[node name="RP_018" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.951863, -0.00708043, 0.30644, 0.00793158, 0.999967, -0.00153237, -0.306419, 0.00388916, 0.951888, 23.498, 55.062, -23.0557)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_019")
+next_pt_init = NodePath("../RP_017")
+prior_mag = 12.6483
+next_mag = 7.12407
+
+[node name="RP_019" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.969748, -0.0628349, 0.235879, 0.0172628, 0.981536, 0.190497, -0.243493, -0.180662, 0.952928, 16.5881, 53.1444, -47.3159)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_020")
+next_pt_init = NodePath("../RP_018")
+prior_mag = 2.68179
+next_mag = 12.6483
+
+[node name="RP_020" type="Node3D" parent="RoadManager/Road_005"]
+transform = Transform3D(0.518781, -0.109799, 0.847826, -0.065528, 0.983693, 0.167491, -0.852391, -0.142448, 0.503127, 13.2781, 52.606, -54.9037)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+next_pt_init = NodePath("../RP_019")
+prior_mag = 2.24429
+next_mag = 2.68179
+
+[node name="Road_006" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = ExtResource("3_o4j5r")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_004"), NodePath("RP_026")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.243835, -0.0196233, 0.969618, 0, 0.999795, 0.0202341, -0.969817, 0.00493377, -0.243785, 76.0005, 33.2577, -342.403)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_002")
+next_pt_init = NodePath("../RP_004")
+next_mag = 2.00209
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.0651241, -0.10626, 0.992204, -0.0723121, 0.992203, 0.101514, -0.995254, -0.0651373, -0.0723003, 68.191, 32.5647, -341.694)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 0.6
+next_mag = 16.0
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.241775, -0.116183, 0.963352, -0.0723121, 0.992202, 0.101514, -0.967634, -0.0451185, -0.248291, 65.8789, 33.0839, -341.776)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 3.51107
+next_mag = 0.6
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.243835, -0.0196233, 0.969618, 0, 0.999795, 0.0202341, -0.969817, 0.00493377, -0.243785, 80.7701, 33.2616, -342.988)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_001")
+prior_mag = 2.00209
+next_mag = 2.00209
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.041582, -0.0578767, 0.997457, -0.00268524, 0.998324, 0.057815, -0.999131, -0.000274342, -0.0416677, 59.4826, 32.7099, -341.586)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 3.29179
+next_mag = 3.51107
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.496763, -0.119386, 0.859635, -0.0970932, 0.99192, 0.0816501, -0.862438, -0.0429039, -0.504341, 52.9102, 33.0236, -341.71)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_005")
+prior_mag = 5.01534
+next_mag = 3.29179
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.155479, -0.131659, 0.979026, 0.0616805, 0.987851, 0.142641, -0.985912, 0.0825644, -0.145469, 43.499, 32.4519, -341.034)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_008")
+next_pt_init = NodePath("../RP_006")
+prior_mag = 4.22234
+next_mag = 5.01534
+
+[node name="RP_008" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(0.0291346, 0.1186, 0.992515, -0.109152, 0.987376, -0.114782, -0.993598, -0.104991, 0.0417121, 36.5722, 32.5375, -341.163)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_009")
+next_pt_init = NodePath("../RP_007")
+prior_mag = 6.84764
+next_mag = 4.22234
+
+[node name="RP_009" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.0970164, 0.0141149, 0.995183, 0.0203084, 0.999719, -0.0121995, -0.995076, 0.0190271, -0.0972759, 22.8998, 31.839, -341.434)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_010")
+next_pt_init = NodePath("../RP_008")
+prior_mag = 8.54908
+next_mag = 6.84764
+
+[node name="RP_010" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.0105737, 0.0678258, 0.997641, -0.032094, 0.99716, -0.0681333, -0.999429, -0.0327387, -0.00836685, 5.81629, 31.6847, -340.18)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_011")
+next_pt_init = NodePath("../RP_009")
+prior_mag = 6.6656
+next_mag = 8.54908
+
+[node name="RP_011" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.120851, -0.123972, 0.984899, -0.034664, 0.992093, 0.120625, -0.992065, -0.0195629, -0.124193, -7.43928, 31.9308, -339.494)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_012")
+next_pt_init = NodePath("../RP_010")
+prior_mag = 8.13124
+next_mag = 6.6656
+
+[node name="RP_012" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.00567025, 0.0634559, 0.997968, -0.023923, 0.99769, -0.0635742, -0.999697, -0.0242349, -0.0041391, -23.5267, 31.0164, -337.17)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_013")
+next_pt_init = NodePath("../RP_011")
+prior_mag = 8.47134
+next_mag = 8.13124
+
+[node name="RP_013" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.128809, -0.0491526, 0.99045, -0.0753938, 0.996366, 0.0396411, -0.988799, -0.0695677, -0.132047, -40.421, 31.6702, -336.088)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_014")
+next_pt_init = NodePath("../RP_012")
+prior_mag = 12.4503
+next_mag = 8.47134
+
+[node name="RP_014" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.0182331, -0.0104645, 0.999779, -0.0617199, 0.99805, 0.00932074, -0.997926, -0.0615363, -0.0188435, -65.1701, 33.7337, -333.797)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_015")
+next_pt_init = NodePath("../RP_013")
+prior_mag = 11.5375
+next_mag = 12.4503
+
+[node name="RP_015" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.207906, 0.0785527, 0.974989, -0.0870298, 0.991331, -0.0984275, -0.974269, -0.105317, -0.199267, -87.0171, 35.7405, -326.871)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_016")
+next_pt_init = NodePath("../RP_014")
+prior_mag = 10.8699
+next_mag = 11.5375
+
+[node name="RP_016" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.998556, 0.0493472, 0.0211809, 0.0488458, 0.998528, -0.0235718, -0.022313, -0.0225031, -0.999498, -97.9409, 37.6991, -308.178)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_017")
+next_pt_init = NodePath("../RP_015")
+prior_mag = 5.31325
+next_mag = 10.8699
+
+[node name="RP_017" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.430416, 0.0221636, 0.902358, -0.0343436, 0.998572, -0.0409084, -0.901976, -0.0485979, -0.429041, -104.465, 38.6147, -299.838)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_018")
+next_pt_init = NodePath("../RP_016")
+prior_mag = 15.8577
+next_mag = 5.31325
+
+[node name="RP_018" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.899214, -0.0388227, 0.435783, -0.0312537, 0.99921, 0.0245266, -0.43639, 0.00843487, -0.899718, -126.523, 39.326, -277.072)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_019")
+next_pt_init = NodePath("../RP_017")
+prior_mag = 7.65919
+next_mag = 15.8577
+
+[node name="RP_019" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(0.204078, -0.0347531, 0.978337, -0.0590009, 0.997116, 0.0477275, -0.977174, -0.0674629, 0.201439, -141.153, 39.0866, -272.537)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_020")
+next_pt_init = NodePath("../RP_018")
+prior_mag = 4.65273
+next_mag = 7.65919
+
+[node name="RP_020" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.513842, -0.147253, 0.845153, -0.0910367, 0.988955, 0.116959, -0.85304, -0.0168416, -0.521572, -150.27, 38.735, -270.71)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_021")
+next_pt_init = NodePath("../RP_019")
+prior_mag = 6.71666
+next_mag = 4.65273
+
+[node name="RP_021" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(0.231677, -0.0244634, 0.972485, -0.0915917, 0.994694, 0.0468422, -0.968471, -0.0999238, 0.228207, -163.578, 38.0796, -269.045)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_022")
+next_pt_init = NodePath("../RP_020")
+prior_mag = 8.47341
+next_mag = 6.71666
+
+[node name="RP_022" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.515199, -0.155304, 0.842882, -0.185307, 0.980368, 0.0673703, -0.836798, -0.121483, -0.533864, -180.2, 37.5073, -265.78)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_023")
+next_pt_init = NodePath("../RP_021")
+prior_mag = 5.66122
+next_mag = 8.47341
+
+[node name="RP_023" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.343522, -0.0587973, 0.937302, -0.0835693, 0.995992, 0.0318508, -0.935418, -0.0673882, -0.347059, -190.369, 37.4415, -260.803)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_024")
+next_pt_init = NodePath("../RP_022")
+prior_mag = 13.1224
+next_mag = 5.66122
+
+[node name="RP_024" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.937368, -0.15571, 0.3116, -0.152621, 0.987684, 0.0344354, -0.313125, -0.0152781, -0.949589, -207.719, 36.9677, -241.101)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_025")
+next_pt_init = NodePath("../RP_023")
+prior_mag = 8.74357
+next_mag = 13.1224
+
+[node name="RP_025" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(0.0896327, -0.173835, 0.980687, -0.0377041, 0.983352, 0.177754, -0.99526, -0.0529085, 0.0815862, -223.507, 34.8063, -233.904)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_026")
+next_pt_init = NodePath("../RP_024")
+prior_mag = 2.31897
+next_mag = 8.74357
+
+[node name="RP_026" type="Node3D" parent="RoadManager/Road_006"]
+transform = Transform3D(-0.702357, -0.24833, 0.667103, -0.130831, 0.966243, 0.221939, -0.699697, 0.068603, -0.711138, -227.74, 34.2613, -232.103)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+next_pt_init = NodePath("../RP_025")
+prior_mag = 2.31897
+next_mag = 2.31897
+
+[node name="Road_007" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = SubResource("StandardMaterial3D_dp5ku")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_008")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_007"]
+transform = Transform3D(-0.999871, 0.00104981, 0.0160085, 0, 0.997857, -0.0654374, -0.0160429, -0.065429, -0.997728, -15.3973, 30.028, -336.723)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_002")
+next_mag = 7.73707
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_007"]
+transform = Transform3D(-0.975483, 0.0371235, -0.216919, 0.0472642, 0.99801, -0.0417474, 0.214938, -0.0509764, -0.975296, -12.4363, 32.3854, -318.256)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 14.1878
+next_mag = 7.73707
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_007"]
+transform = Transform3D(-0.985828, 0.0500223, -0.16013, 0.0522334, 0.998588, -0.00962626, 0.159422, -0.0178539, -0.987049, -5.63186, 36.0705, -290.614)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 39.2475
+next_mag = 14.1878
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_007"]
+transform = Transform3D(-0.973522, -0.0383717, -0.225352, -0.0291748, 0.998605, -0.0440018, 0.226726, -0.0362621, -0.973283, 9.88338, 41.9231, -215.146)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 16.3114
+next_mag = 39.2475
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_007"]
+transform = Transform3D(-0.98074, -0.054021, -0.1877, -0.0454933, 0.99774, -0.0494505, 0.189947, -0.039959, -0.980981, 16.7005, 45.1619, -183.509)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_004")
+prior_mag = 24.8888
+next_mag = 16.3114
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_007"]
+transform = Transform3D(-0.984909, -0.030221, -0.170411, -0.0147297, 0.995701, -0.0914471, 0.172442, -0.087557, -0.98112, 27.5954, 48.0605, -135.528)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_005")
+prior_mag = 21.3743
+next_mag = 24.8888
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_007"]
+transform = Transform3D(-0.973018, -0.121811, -0.195952, -0.103689, 0.989544, -0.10026, 0.206116, -0.0772366, -0.975474, 36.5691, 50.9588, -93.7864)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_008")
+next_pt_init = NodePath("../RP_006")
+prior_mag = 13.8103
+next_mag = 21.3743
+
+[node name="RP_008" type="Node3D" parent="RoadManager/Road_007"]
+transform = Transform3D(-0.999089, -0.000477144, -0.0426815, -0.0027533, 0.998575, 0.053286, 0.0425953, 0.0533549, -0.997666, 44.8172, 53.217, -67.4364)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+next_pt_init = NodePath("../RP_007")
+prior_mag = 9.95994
+next_mag = 13.8103
+
+[node name="Road_008" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = ExtResource("3_o4j5r")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_004"), NodePath("RP_010")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_008"]
+transform = Transform3D(-0.015353, -0.0411518, 0.999035, 0.00246488, 0.999148, 0.0411944, -0.999879, 0.00309495, -0.0152385, 74.1715, 53.9, -66.3842)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_002")
+next_pt_init = NodePath("../RP_004")
+next_mag = 1.96414
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_008"]
+transform = Transform3D(-0.0184574, -0.0038482, 0.999822, -0.0516451, 0.998661, 0.0028903, -0.998495, -0.0515825, -0.0186315, 65.3458, 54.2619, -66.2629)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 9.27813
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_008"]
+transform = Transform3D(-0.0210193, 0.0461422, 0.998714, -0.0506565, 0.997602, -0.047157, -0.998495, -0.0515825, -0.0186315, 45.4619, 54.1646, -65.8903)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 0.6
+next_mag = 9.27813
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_008"]
+transform = Transform3D(-0.015353, -0.0411518, 0.999035, 0.00246488, 0.999148, 0.0411944, -0.999879, 0.00309495, -0.0152385, 76.5692, 53.9989, -66.4208)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_001")
+prior_mag = 1.96414
+next_mag = 1.96414
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_008"]
+transform = Transform3D(-0.0489399, 0.0206956, 0.998587, -0.0473561, 0.998613, -0.023017, -0.997678, -0.0484157, -0.0478919, 43.0759, 54.0882, -65.8456)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 16.1646
+next_mag = 0.6
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_008"]
+transform = Transform3D(-0.155391, 0.0706387, 0.985324, -0.122335, 0.988386, -0.090151, -0.980249, -0.134548, -0.144945, 12.7461, 52.8153, -54.2999)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_005")
+prior_mag = 12.3766
+next_mag = 16.0531
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_008"]
+transform = Transform3D(-0.108179, 0.14214, 0.983918, 0.062684, 0.988732, -0.135943, -0.992153, 0.0469696, -0.11587, -11.7218, 51.6252, -50.7385)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_008")
+next_pt_init = NodePath("../RP_006")
+prior_mag = 16.7336
+next_mag = 12.3766
+
+[node name="RP_008" type="Node3D" parent="RoadManager/Road_008"]
+transform = Transform3D(-0.380433, 0.0168777, 0.924654, -0.171818, 0.981136, -0.0886004, -0.908707, -0.192579, -0.370357, -44.3024, 50.6935, -43.3586)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_009")
+next_pt_init = NodePath("../RP_007")
+prior_mag = 10.3595
+next_mag = 16.7336
+
+[node name="RP_009" type="Node3D" parent="RoadManager/Road_008"]
+transform = Transform3D(-0.275412, -0.060559, 0.959417, -0.11581, 0.992835, 0.0294239, -0.954325, -0.103006, -0.280452, -63.8944, 50.7143, -36.7843)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_010")
+next_pt_init = NodePath("../RP_008")
+prior_mag = 6.78877
+next_mag = 10.3595
+
+[node name="RP_010" type="Node3D" parent="RoadManager/Road_008"]
+transform = Transform3D(-0.404468, -0.0414059, 0.913614, -0.0916451, 0.995781, 0.00455739, -0.909948, -0.081885, -0.406557, -76.1902, 51.3253, -31.1086)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+next_pt_init = NodePath("../RP_009")
+prior_mag = 5.65807
+next_mag = 6.78877
+
+[node name="Road_009" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = SubResource("StandardMaterial3D_xwdes")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_008")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_009"]
+transform = Transform3D(0.279361, -0.0462411, -0.959072, 0.097383, 0.995054, -0.01961, 0.955235, -0.0879191, 0.282482, -196.955, 41.0578, -88.6075)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_pt_init = NodePath("../RP_002")
+next_mag = 16.0
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_009"]
+transform = Transform3D(0.275637, -0.0218085, -0.961014, 0, 0.999743, -0.0226873, 0.961262, 0.00625348, 0.275566, -180.131, 41.6174, -91.2115)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 16.0
+next_mag = 16.0
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_009"]
+transform = Transform3D(0.31064, -0.0323343, -0.949978, 0.0141264, 0.999468, -0.0293995, 0.950423, -0.00428709, 0.310931, -156.561, 42.1948, -97.6467)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 22.2828
+next_mag = 16.0
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_009"]
+transform = Transform3D(0.195437, -0.0252248, -0.980392, -0.0310827, 0.999008, -0.0319, 0.980223, 0.0367077, 0.194459, -113.047, 44.5805, -106.99)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 17.9299
+next_mag = 22.2828
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_009"]
+transform = Transform3D(0.176704, -0.00544824, -0.984249, 0.0116035, 0.999927, -0.00345182, 0.984195, -0.0108108, 0.176754, -78.4962, 46.0427, -116.469)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_004")
+prior_mag = 17.7211
+next_mag = 17.9299
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_009"]
+transform = Transform3D(0.159581, 0.0395531, -0.986392, -0.0176686, 0.999151, 0.0372062, 0.987027, 0.0114908, 0.160144, -43.5676, 47.4534, -122.464)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_005")
+prior_mag = 18.2323
+next_mag = 17.7211
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_009"]
+transform = Transform3D(0.301492, -0.0362831, -0.952778, 0.0505174, 0.99848, -0.0220379, 0.952129, -0.0414876, 0.302867, -8.13307, 46.7003, -131.025)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_pt_init = NodePath("../RP_008")
+next_pt_init = NodePath("../RP_006")
+prior_mag = 16.0
+next_mag = 18.2323
+
+[node name="RP_008" type="Node3D" parent="RoadManager/Road_009"]
+transform = Transform3D(0.123936, 0.0584414, -0.990568, 0.0152925, 0.998033, 0.0607952, 0.992172, -0.022683, 0.122798, 22.6266, 46.8136, -137.689)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+next_pt_init = NodePath("../RP_007")
+prior_mag = 16.0
+next_mag = 16.0
+
+[node name="Road_010" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = ExtResource("3_o4j5r")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_009")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_010"]
+transform = Transform3D(-0.979058, 0.00567726, 0.203503, 0, 0.999611, -0.0278869, -0.203582, -0.0273029, -0.978677, 27.345, 57.0762, 1.08352)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_002")
+next_mag = 16.0
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_010"]
+transform = Transform3D(-0.975541, -0.0868542, 0.201931, -0.0906237, 0.99584, -0.00947939, -0.200268, -0.0275473, -0.979354, 23.5534, 57.8415, 19.207)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 8.53582
+next_mag = 16.0
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_010"]
+transform = Transform3D(-0.887258, -0.0678596, 0.456254, -0.0238861, 0.994552, 0.101472, -0.460654, 0.0791333, -0.884045, 17.8341, 57.5362, 35.2825)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 6.09123
+next_mag = 8.53582
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_010"]
+transform = Transform3D(-0.398375, 0.0269373, 0.916827, -0.0460177, 0.997723, -0.0493094, -0.916068, -0.0618339, -0.396228, 8.73459, 57.7572, 43.3738)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 9.8667
+next_mag = 6.09123
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_010"]
+transform = Transform3D(-0.302808, -0.147778, 0.941525, -0.0243364, 0.988782, 0.147369, -0.952741, 0.0217111, -0.303008, -9.73879, 57.2714, 50.3044)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_004")
+prior_mag = 8.47601
+next_mag = 9.8667
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_010"]
+transform = Transform3D(-0.0381629, -0.0228392, 0.99901, 0.0026207, 0.999733, 0.0229558, -0.999268, 0.00349417, -0.0380928, -26.4105, 56.3225, 53.2054)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_005")
+prior_mag = 8.15951
+next_mag = 8.47601
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_010"]
+transform = Transform3D(0.136633, -0.142611, 0.980303, 0.0423296, 0.98952, 0.138052, -0.989717, 0.0226332, 0.141238, -42.6711, 55.4926, 52.3693)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_008")
+next_pt_init = NodePath("../RP_006")
+prior_mag = 6.88352
+next_mag = 8.15951
+
+[node name="RP_008" type="Node3D" parent="RoadManager/Road_010"]
+transform = Transform3D(0.18743, 0.130204, 0.97361, 0.025577, 0.990193, -0.137345, -0.981945, 0.0506446, 0.182262, -56.2388, 56.007, 50.1335)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_009")
+next_pt_init = NodePath("../RP_007")
+next_mag = 6.88352
+
+[node name="RP_009" type="Node3D" parent="RoadManager/Road_010"]
+transform = Transform3D(-0.660959, -0.488555, 0.569603, 0.0597907, 0.722345, 0.688943, -0.748037, 0.48942, -0.448229, -61.8211, 55.8662, 49.8217)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+next_pt_init = NodePath("../RP_008")
+
+[node name="Road_011" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = ExtResource("3_o4j5r")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_011")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.865663, -0.0143421, -0.500422, 0, 0.99959, -0.0286483, 0.500627, 0.0247998, 0.865308, -65.1598, 54.5146, 145.006)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_002")
+next_mag = 16.0
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.860501, -0.0864686, -0.502056, 0.0937537, 0.995537, -0.0107707, 0.500747, -0.0378014, 0.864768, -55.7146, 57.7933, 127.48)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 9.34241
+next_mag = 16.0
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.99625, -0.0630017, 0.0593031, 0.0562963, 0.992485, 0.108646, -0.0657023, -0.1049, 0.99231, -51.6592, 57.2834, 109.248)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 11.6149
+next_mag = 9.34241
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.991702, 0.0578826, 0.114794, -0.0616811, 0.99765, 0.0298149, -0.112798, -0.0366481, 0.992942, -53.6583, 56.1715, 86.1202)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 14.0185
+next_mag = 11.6149
+
+[node name="RP_005" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.948771, 0.0570002, 0.31078, -0.0680827, 0.997368, 0.0249201, -0.308542, -0.0448022, 0.950155, -60.3673, 55.8928, 59.2221)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_004")
+prior_mag = 11.8708
+next_mag = 14.0185
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.945596, -0.00836704, 0.325235, 0.00771694, 0.999965, 0.00328881, -0.325251, -0.000600063, 0.945627, -64.342, 56.053, 35.6289)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_005")
+prior_mag = 17.6241
+next_mag = 11.8708
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.99385, -0.0230192, 0.108319, 0.00547756, 0.987177, 0.159531, -0.110602, -0.157956, 0.981232, -70.1631, 53.3368, 0.97074)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_008")
+next_pt_init = NodePath("../RP_006")
+prior_mag = 19.3359
+next_mag = 17.6241
+
+[node name="RP_008" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.995223, -0.0290654, 0.0931977, 0.00519639, 0.969069, 0.246731, -0.0974865, -0.245068, 0.964592, -75.6823, 50.2995, -36.9783)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_009")
+next_pt_init = NodePath("../RP_007")
+prior_mag = 13.2265
+next_mag = 19.3359
+
+[node name="RP_009" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.996383, 0.0355729, 0.0771639, -0.051129, 0.97634, 0.210109, -0.0678641, -0.213294, 0.974628, -79.9405, 47.4206, -63.078)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_010")
+next_pt_init = NodePath("../RP_008")
+prior_mag = 9.57124
+next_mag = 13.2265
+
+[node name="RP_010" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.996366, -0.0533659, 0.0663876, 0.0441286, 0.990057, 0.133566, -0.0728554, -0.130151, 0.988814, -80.1992, 46.3503, -82.1676)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_011")
+next_pt_init = NodePath("../RP_009")
+prior_mag = 10.8988
+next_mag = 9.57124
+
+[node name="RP_011" type="Node3D" parent="RoadManager/Road_011"]
+transform = Transform3D(0.997539, -0.0471645, 0.0518823, 0.0417087, 0.993947, 0.101633, -0.0563618, -0.0992187, 0.993468, -84.005, 45.097, -108.635)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 0.3
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+next_pt_init = NodePath("../RP_010")
+prior_mag = 10.8988
+next_mag = 10.8988
+
+[node name="Road_012" type="Node3D" parent="RoadManager"]
+script = ExtResource("2_2g1u2")
+material_resource = ExtResource("3_o4j5r")
+use_lowpoly_preview = true
+edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
+edge_rp_target_dirs = Array[int]([-1, -1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_007")])
+edge_rp_local_dirs = Array[int]([0, 1])
+
+[node name="RP_001" type="Node3D" parent="RoadManager/Road_012"]
+transform = Transform3D(0.317636, -0.0869509, -0.944218, 1.43798e-09, 0.995787, -0.0916998, 0.948213, 0.0291272, 0.316298, -186.273, 47.437, -43.9714)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_002")
+next_mag = 16.0
+
+[node name="RP_002" type="Node3D" parent="RoadManager/Road_012"]
+transform = Transform3D(0.18176, -0.0742502, -0.980536, 0.111081, 0.992313, -0.054551, 0.977049, -0.099004, 0.188611, -171.26, 48.3521, -46.238)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_003")
+next_pt_init = NodePath("../RP_001")
+prior_mag = 6.47486
+next_mag = 16.0
+
+[node name="RP_003" type="Node3D" parent="RoadManager/Road_012"]
+transform = Transform3D(0.289032, -0.00334167, -0.957313, 0, 0.999994, -0.00349065, 0.95732, 0.00100891, 0.28903, -158.737, 49.2235, -49.3963)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_002")
+prior_mag = 8.02448
+next_mag = 6.47486
+
+[node name="RP_004" type="Node3D" parent="RoadManager/Road_012"]
+transform = Transform3D(0.156435, 0.0585762, -0.985949, 0, 0.99824, 0.0593063, 0.987689, -0.00927757, 0.156159, -143.104, 49.2618, -53.0655)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_006")
+next_pt_init = NodePath("../RP_003")
+prior_mag = 10.8356
+next_mag = 8.02448
+
+[node name="RP_006" type="Node3D" parent="RoadManager/Road_012"]
+transform = Transform3D(0.159881, 0.00516861, -0.987122, 0, 0.999986, 0.00523596, 0.987137, -0.000837133, 0.159879, -100.402, 47.8059, -64.2273)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+prior_pt_init = NodePath("../RP_007")
+next_pt_init = NodePath("../RP_004")
+prior_mag = 7.8865
+next_mag = 11.2468
+
+[node name="RP_007" type="Node3D" parent="RoadManager/Road_012"]
+transform = Transform3D(0.145775, 0.131676, -0.980516, 0.101879, 0.983836, 0.147268, 0.984058, -0.121362, 0.130004, -82.0797, 46.8285, -66.572)
+script = ExtResource("4_17jhl")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+lane_width = 2.5
+shoulder_width_l = 0.5
+shoulder_width_r = 0.5
+next_pt_init = NodePath("../RP_006")
+prior_mag = 7.8865
+next_mag = 7.8865

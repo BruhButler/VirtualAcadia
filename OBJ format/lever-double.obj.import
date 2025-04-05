@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0kmnv0bsto1x"
+path="res://.godot/imported/lever-double.obj-3d064c2340c400f315e041bebd99190c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lever-double.obj-3d064c2340c400f315e041bebd99190c.mesh"]
+
+source_file="res://OBJ format/lever-double.obj"
+dest_files=["res://.godot/imported/lever-double.obj-3d064c2340c400f315e041bebd99190c.mesh", "res://.godot/imported/lever-double.obj-3d064c2340c400f315e041bebd99190c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

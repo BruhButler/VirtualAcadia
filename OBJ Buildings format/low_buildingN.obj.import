@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cwq0jtdh5fbhk"
+path="res://.godot/imported/low_buildingN.obj-23955a616e0f46122a0142cba1e4845f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/low_buildingN.obj-23955a616e0f46122a0142cba1e4845f.mesh"]
+
+source_file="res://OBJ Buildings format/low_buildingN.obj"
+dest_files=["res://.godot/imported/low_buildingN.obj-23955a616e0f46122a0142cba1e4845f.mesh", "res://.godot/imported/low_buildingN.obj-23955a616e0f46122a0142cba1e4845f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

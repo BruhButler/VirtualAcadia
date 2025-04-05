@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmcmgk660gt06"]
+
+[ext_resource type="Script" uid="uid://dx4lcmq15pn3v" path="res://hud.gd" id="1_37p78"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_37p78")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 165.0
+offset_bottom = 68.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 164.0
+offset_bottom = 70.0

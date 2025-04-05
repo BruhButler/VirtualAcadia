@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bspqru3hc0d8l"
+path="res://.godot/imported/Terrain_Concrete.png-d371246e31ea30ea8f51a124c702fd84.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://OBJ Buildings format/godot_terrain_plugin-master/godot_terrain_plugin-master/addons/zylann.terrain/demos/textures/Terrain_Concrete.png"
+dest_files=["res://.godot/imported/Terrain_Concrete.png-d371246e31ea30ea8f51a124c702fd84.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

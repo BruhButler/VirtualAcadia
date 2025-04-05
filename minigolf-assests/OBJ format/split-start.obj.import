@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://61mm3v0nf1my"
+path="res://.godot/imported/split-start.obj-990e000dc7ac9a9f9fb61debb67ae467.mesh"
+
+[deps]
+
+files=["res://.godot/imported/split-start.obj-990e000dc7ac9a9f9fb61debb67ae467.mesh"]
+
+source_file="res://minigolf-assests/OBJ format/split-start.obj"
+dest_files=["res://.godot/imported/split-start.obj-990e000dc7ac9a9f9fb61debb67ae467.mesh", "res://.godot/imported/split-start.obj-990e000dc7ac9a9f9fb61debb67ae467.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://df0pqoa611k0u"
+path="res://.godot/imported/spline-concave-straight-hill-complete.obj-9c966c039c3bf6f00cac4d95a9bcf8eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/spline-concave-straight-hill-complete.obj-9c966c039c3bf6f00cac4d95a9bcf8eb.mesh"]
+
+source_file="res://minigolf-assests/OBJ format/spline-concave-straight-hill-complete.obj"
+dest_files=["res://.godot/imported/spline-concave-straight-hill-complete.obj-9c966c039c3bf6f00cac4d95a9bcf8eb.mesh", "res://.godot/imported/spline-concave-straight-hill-complete.obj-9c966c039c3bf6f00cac4d95a9bcf8eb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

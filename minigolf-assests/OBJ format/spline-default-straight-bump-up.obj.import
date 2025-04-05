@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dmhidjxev53pf"
+path="res://.godot/imported/spline-default-straight-bump-up.obj-22971dccb1e5f7b26f0e59a15c5fbeb1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/spline-default-straight-bump-up.obj-22971dccb1e5f7b26f0e59a15c5fbeb1.mesh"]
+
+source_file="res://minigolf-assests/OBJ format/spline-default-straight-bump-up.obj"
+dest_files=["res://.godot/imported/spline-default-straight-bump-up.obj-22971dccb1e5f7b26f0e59a15c5fbeb1.mesh", "res://.godot/imported/spline-default-straight-bump-up.obj-22971dccb1e5f7b26f0e59a15c5fbeb1.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

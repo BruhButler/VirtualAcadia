@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvj4txdg44miu"
+path="res://.godot/imported/sphere.obj-4332d7ce03a7ddb8ea5a1aa831fca629.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sphere.obj-4332d7ce03a7ddb8ea5a1aa831fca629.mesh"]
+
+source_file="res://OBJ Buildings format/godot_terrain_plugin-master/godot_terrain_plugin-master/addons/zylann.terrain/demos/sphere.obj"
+dest_files=["res://.godot/imported/sphere.obj-4332d7ce03a7ddb8ea5a1aa831fca629.mesh", "res://.godot/imported/sphere.obj-4332d7ce03a7ddb8ea5a1aa831fca629.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

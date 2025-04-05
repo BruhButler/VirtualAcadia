@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3bixfu78hb1j"]
+
+[ext_resource type="Shader" uid="uid://bw7rnviopojek" path="res://TestCam.gdshader" id="1_223st"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h6cj3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1odf"]
+albedo_color = Color(0.027451, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_223st"]
+render_priority = 0
+shader = ExtResource("1_223st")
+shader_parameter/target_resolution = Vector2(320, 180)
+shader_parameter/colors_per_channel = 8.0
+shader_parameter/depth_outline_strength = 0.8
+shader_parameter/normal_outline_strength = 0.5
+
+[sub_resource type="QuadMesh" id="QuadMesh_075vr"]
+material = SubResource("ShaderMaterial_223st")
+flip_faces = true
+size = Vector2(2, 2)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.563497, 0, -0.826118, -0.177383, 0.976676, 0.120993, 0.80685, 0.214718, -0.550354, 0, 0, 0)
+mesh = SubResource("BoxMesh_h6cj3")
+surface_material_override/0 = SubResource("StandardMaterial3D_m1odf")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.800229, 0, 0.599694, 0, 1, 0, -0.599694, 0, 0.800229, 1.44139, 0.706106, 2.55257)
+current = true
+
+[node name="screen" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.39563)
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_075vr")

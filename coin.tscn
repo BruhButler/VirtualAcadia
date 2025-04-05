@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://085o8fc4oq2h"]
+
+[ext_resource type="Script" uid="uid://dg701vp8hlrjw" path="res://coin.gd" id="1_0t63x"]
+[ext_resource type="ArrayMesh" uid="uid://d05qi4wbqdn25" path="res://OBJ format/coin.obj" id="2_v7riw"]
+[ext_resource type="AudioStream" uid="uid://cn1kh8gmu05oh" path="res://mixkit-fairy-arcade-sparkle-866.wav" id="3_v7riw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0t63x"]
+radius = 0.365155
+
+[node name="coin" type="Area3D"]
+script = ExtResource("1_0t63x")
+
+[node name="CoinSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_v7riw")
+
+[node name="coin_obj" type="MeshInstance3D" parent="."]
+layers = 31
+mesh = ExtResource("2_v7riw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_0t63x")
+
+[connection signal="finished" from="CoinSound" to="." method="_on_coin_sound_finished"]

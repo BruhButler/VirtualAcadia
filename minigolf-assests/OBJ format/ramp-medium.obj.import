@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bphaxpsmg023j"
+path="res://.godot/imported/ramp-medium.obj-afa4b244332d35dd12a0b011d486d665.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ramp-medium.obj-afa4b244332d35dd12a0b011d486d665.mesh"]
+
+source_file="res://minigolf-assests/OBJ format/ramp-medium.obj"
+dest_files=["res://.godot/imported/ramp-medium.obj-afa4b244332d35dd12a0b011d486d665.mesh", "res://.godot/imported/ramp-medium.obj-afa4b244332d35dd12a0b011d486d665.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
